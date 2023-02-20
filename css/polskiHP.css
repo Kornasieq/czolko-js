@@ -1,0 +1,11 @@
+h1, .box {
+    display: flex;
+    justify-content: center;
+}
+
+.box button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
