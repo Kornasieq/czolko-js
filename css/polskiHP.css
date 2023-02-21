@@ -53,8 +53,14 @@ button:hover {
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
   h1 {
     font-size: 50px;
   }
+
+  .counters {
+    display: flex;
+    justify-content: space-between;
+  }
+
 }
