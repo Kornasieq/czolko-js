@@ -1,4 +1,36 @@
-let songs = ["Gang Albanii - Napad na bank", "big klamoty", "ballada o esporcie", "wok to poland", "bombsajt a"]
+let songs = [
+    "NAPAD NA BANK - PRO8L3M",
+    "BIG KLAMOTY",
+    "VHS - PRO8L3M",
+    "MOLLY - PRO8L3M",
+    "MAKJIAŻ - PRO8L3M",
+    "DOUBLE D'S - SCHAFTER, ŻABSON",
+    "PAKISTAŃSKIE DISCO - POPEK",
+    "BESTIA - YOUNG IGI",
+    "CALIFORNIA - WHITE2115",
+    "DLA PRAWDZIWYCH DAM - POPEK",
+    "8 KOBIET - TACONAFIDE",
+    "WODOSPADY - POPEK",
+    "CANDY - QUEBONAFIDE",
+    "TAMAGOTCHI - TACONAFIDE",
+    "SZAMAN - PALUCH",
+    "NA SZCZYCIE - GRUBSON",
+    "SEXOHOLI - ŻABSON",
+    "JUNGLE GIRL - YOUNG LEOSIA",
+    "DISNEY - KIZO",
+    "KRÓL BALU - KIZO",
+    "KISS CAM - MATA",
+    "SZAFIR - MATA",
+    "SCHODKI - MATA",
+    "BIBLIOTEKA TRAP - MATA",
+    "PATOINTELIGENCJA - MATA",
+    "W PIĄTKI LEŻE W WANNIE - TACO",
+    "LECI NOWY FUTURE - TACO",
+    "JAKIE TO UCZUCIE? - OKI",
+    "BUBBLETEA - QUEBONAFIDE",
+    "JESTEŚ ŁADNIEJSZ NIŻ NA - BEDOES",
+    "HOT COFFEE - SCHAFTER",
+]
 
 //const title = document.getElementById('title');
 const title = document.getElementById('title');
@@ -16,8 +48,10 @@ let counter = 0;
 let points = 0;
 let availableSongs = [];
 let currentSong = [];
+let sec = 30;
+let time = setInterval(Timer, 1000);
 
-const maxSongs = 5;
+const maxSongs = 10;
 
 function StartGame() {
     counter = 0;
@@ -28,6 +62,7 @@ function StartGame() {
 }
 
 function GetNewSong() {
+    sec = 30;
     if (availableSongs.length == 0 || counter >= maxSongs) {
         return window.location.assign("/menu.html")
     }
@@ -37,11 +72,21 @@ function GetNewSong() {
     currentSong = availableSongs[songIndex];
     // console.log(currentSong)
     title.innerText = currentSong;
-    paragraf.innerText = "Ilość rund: " + counter;
+    paragraf.innerText = "Ilość rund: "+ counter + "/10"; 
     sumOfPoints.innerText = "Ilość punktów: " + points;
 
 
     availableSongs.splice(songIndex, 1);
+}
+
+function Timer() {
+    document.getElementById('timer').innerHTML = sec + " sekund";
+    sec--;
+    if(sec == -1) {
+        // clearInterval(time);
+        GetNewSong();
+        console.log(time)
+    }
 }
 
 
@@ -67,10 +112,13 @@ correct.addEventListener('click', () => {
     points++
     console.log(points)
     GetNewSong();
+    sec = 30;
 })
 
 wrong.addEventListener('click', () => {
     GetNewSong();
+    Timer();
+    sec = 30;
 })
 
 
