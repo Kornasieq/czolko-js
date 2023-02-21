@@ -61,7 +61,7 @@ function StartGame() {
 
 function GetNewSong() {
     if (availableSongs.length == 0 || counter >= maxSongs) {
-        return window.location.assign("/menu.html")
+        return window.location.assign("/index.html")
     }
     counter++;
     const songIndex =  Math.floor(Math.random() * availableSongs.length);
