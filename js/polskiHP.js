@@ -90,6 +90,7 @@ function Timer() {
 }
 
 
+
 // answers.forEach(answer => {
 //     answer.addEventListener("click", e => {
 
@@ -140,13 +141,10 @@ wrongButton.addEventListener("click", () => {
 });
 
 if ("vibrate" in navigator) {
-    // Przypisz funkcję obsługi kliknięcia do przycisku
     document.getElementById("correct").addEventListener("click", function() {
-      // Uruchom wibracje
       navigator.vibrate(200);
     });
   } else {
-    // Wibracje nie są obsługiwane
     console.log("Wibracje nie są obsługiwane.");
   }
 
