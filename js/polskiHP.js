@@ -141,7 +141,7 @@ wrongButton.addEventListener("click", () => {
 
 if ("vibrate" in navigator) {
     // Przypisz funkcję obsługi kliknięcia do przycisku
-    document.getElementById("correct").addEventListener("click", function() {
+    document.getElementById("wrong").addEventListener("click", function() {
       // Uruchom wibracje
       navigator.vibrate(200);
     });
