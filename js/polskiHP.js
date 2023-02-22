@@ -121,5 +121,33 @@ wrong.addEventListener('click', () => {
     sec = 30;
 })
 
+const correctButton = document.getElementById("correct");
+const wrongButton = document.getElementById("wrong");
+
+correctButton.addEventListener("click", () => {
+
+  const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/5475");
+  audio.play();
+
+
+});
+
+wrongButton.addEventListener("click", () => {
+ 
+  const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/5476");
+  audio.play();
+
+});
+
+if ("vibrate" in navigator) {
+    // Przypisz funkcję obsługi kliknięcia do przycisku
+    document.getElementById("correct").addEventListener("click", function() {
+      // Uruchom wibracje
+      navigator.vibrate(200);
+    });
+  } else {
+    // Wibracje nie są obsługiwane
+    console.log("Wibracje nie są obsługiwane.");
+  }
 
 StartGame();
