@@ -314,18 +314,19 @@ a {
       justify-content: center;
       color: #fff;
       font-family: 'Sora', sans-serif;
-      font-size: 30px;
+      font-size: 45px;
       text-shadow: 5px 5px rgb(93, 11, 117);
   }
   .box
   {
+    margin-top: 40px;
     display: flex;
     justify-content: space-around;
   }
   .box button {
     display: inline-block;
     padding: 20px 40px;
-    font-size: 20px;
+    font-size: 60px;
     text-align: center;
     background-color: #fff;
     border: 8px solid rgb(88, 10, 112);
