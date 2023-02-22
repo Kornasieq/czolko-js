@@ -48,6 +48,8 @@ let counter = 0;
 let points = 0;
 let availableSongs = [];
 let currentSong = [];
+let sec = 30;
+let time = setInterval(Timer, 1000);
 
 const maxSongs = 10;
 
@@ -60,6 +62,7 @@ function StartGame() {
 }
 
 function GetNewSong() {
+    sec = 30;
     if (availableSongs.length == 0 || counter >= maxSongs) {
         return window.location.assign("/index.html")
     }
@@ -74,6 +77,16 @@ function GetNewSong() {
 
 
     availableSongs.splice(songIndex, 1);
+}
+
+function Timer() {
+    document.getElementById('timer').innerHTML ="Czas: " + sec + " sekund";
+    sec--;
+    if(sec == -1) {
+        // clearInterval(time);
+        GetNewSong();
+        console.log(time)
+    }
 }
 
 
@@ -99,10 +112,13 @@ correct.addEventListener('click', () => {
     points++
     console.log(points)
     GetNewSong();
+    sec = 30;
 })
 
 wrong.addEventListener('click', () => {
     GetNewSong();
+    Timer();
+    sec = 30;
 })
 
 
