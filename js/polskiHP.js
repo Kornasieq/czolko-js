@@ -89,8 +89,7 @@ let songs = [
     "Moonlight",
     "Smells Like Teen Spirit",
     "See You Again",
-    "Sugar",
-    "7 Years",   
+    "Sugar",  
 ]
 
 //const title = document.getElementById('title');
