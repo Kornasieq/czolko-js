@@ -200,18 +200,4 @@ wrongButton.addEventListener("click", () => {
 
 });
 
-if ("vibrate" in navigator) {
-<<<<<<< HEAD
-    // Przypisz funkcję obsługi kliknięcia do przycisku
-    document.getElementById("wrong").addEventListener("click", function() {
-      // Uruchom wibracje
-=======
-    document.getElementById("correct").addEventListener("click", function() {
->>>>>>> b34ffd3f3b87d8595264dac258d46177655d397c
-      navigator.vibrate(200);
-    });
-  } else {
-    console.log("Wibracje nie są obsługiwane.");
-  }
-
 StartGame();
