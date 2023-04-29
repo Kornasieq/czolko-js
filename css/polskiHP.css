@@ -36,12 +36,32 @@ h1, .box {
 
 }
 
+.btn-box {
+  display: flex;
+}
+
+.invisible {
+  width: 50%;
+  height: 100%;
+}
+
+.left {
+  position: absolute;
+  opacity: 0;
+}
+
+.right {
+  position: absolute;
+  right: 0px;
+  opacity: 0;
+}
+
 #correct
 {
 padding: 0px 81.5px;
 }
 
-button:hover {
+.button:hover {
   background-color: rgb(88, 10, 112);
   color: #fff;
 }
@@ -57,12 +77,11 @@ button:hover {
   font-size: 35px;
 }
 
-button
-{
+.button {
   transition: 0.3s;
 }
 
-button:active{
+.button:active{
   animation: anim-shadow 0.3s forwards;
 }
 
@@ -99,7 +118,7 @@ a {
   padding: 10px;
 }
 
-@media (min-width:320px)  {  
+/* @media (min-width:320px)  { 
   *
   {
     margin: 0px;
@@ -199,7 +218,9 @@ a {
     font-weight: bold;
     padding: 10px;
   } }
-@media (min-width:481px)  { *{
+@media (min-width:481px)  { 
+  *
+  {
     margin: 0px;
   }
   body
@@ -298,8 +319,8 @@ a {
     font-weight: bold;
     padding: 10px;
   } }
-@media (min-width:641px)  { * 
-  {
+@media (min-width:641px)  { 
+  * {
     margin: 0px;
   }
   body
@@ -399,7 +420,8 @@ a {
     font-weight: bold;
     padding: 10px;
   }}
-@media (min-width:961px)  { * 
+@media (min-width:961px)  {
+  *
   {
     margin: 0px;
   }
@@ -499,7 +521,8 @@ a {
     font-weight: bold;
     padding: 10px;
   }}
-@media (min-width:1025px) { *
+@media (min-width:1025px) { 
+  *
   {
     margin: 0px;
   }
@@ -598,5 +621,5 @@ a {
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
-  } }
+  } } */
 

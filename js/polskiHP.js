@@ -30,67 +30,6 @@ let songs = [
     "BUBBLETEA - QUEBONAFIDE",
     "JESTEŚ ŁADNIEJSZ NIŻ NA - BEDOES",
     "HOT COFFEE - SCHAFTER",
-    "Blinding Lights - The Weeknd",
-    "Shape of You",
-    "Dance Monkey",
-    "Someone You Loved",
-    "Rockstar",
-    "Sunflower",
-    "One Dance",
-    "Stay",
-    "Believer",
-    "Closer",
-    "Perfect",
-    "Heat Waves",
-    "Señorita",
-    "Starboy",
-    "Say You Won't Let Go",
-    "Bad Guy",
-    "Lovely",
-    "Don't Start Now",
-    "Lucid Dreams",
-    "As It Was",
-    "Thinking Out Loud",
-    "Watermelon Sugar",
-    "God's Plan",
-    "Photograph",
-    "Sweater Weather",
-    "Bohemian Rhapsody",
-    "Something Just Like This",
-    "Shallow",
-    "Love Yourself",
-    "Take Me to Church",
-    "Circles",
-    "Sad!",
-    "Thunder",
-    "7 Rings",
-    "Goosebumps",
-    "Jocelyn Flores",
-    "Stressed Out",
-    "Counting Stars",
-    "Riptide",
-    "Havana",
-    "Wake Me Up",
-    "XO Tour Llif3",
-    "The Hills",
-    "Humble",
-    "Sicko Mode",
-    "One Kiss",
-    "Treat You Better",
-    "Lean On",
-    "Industry Baby",
-    "Demons",
-    "Better Now",
-    "Congratulations",
-    "Faded",
-    "Levitating",
-    "Uptown Funk",
-    "I Took a Pill in Ibiza (Seeb Remix)",
-    "Moonlight",
-    "Smells Like Teen Spirit",
-    "See You Again",
-    "Sugar",
-    "7 Years",   
 ]
 
 //const title = document.getElementById('title');
@@ -151,6 +90,7 @@ function Timer() {
 }
 
 
+
 // answers.forEach(answer => {
 //     answer.addEventListener("click", e => {
 
@@ -201,13 +141,10 @@ wrongButton.addEventListener("click", () => {
 });
 
 if ("vibrate" in navigator) {
-    // Przypisz funkcję obsługi kliknięcia do przycisku
-    document.getElementById("wrong").addEventListener("click", function() {
-      // Uruchom wibracje
+    document.getElementById("correct").addEventListener("click", function() {
       navigator.vibrate(200);
     });
   } else {
-    // Wibracje nie są obsługiwane
     console.log("Wibracje nie są obsługiwane.");
   }
 
